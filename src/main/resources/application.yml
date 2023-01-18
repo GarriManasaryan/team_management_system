@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: team_management_system
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/team_management
+    username: postgres
+    password: 1
+
+  flyway:
+    baselineOnMigrate: true
+

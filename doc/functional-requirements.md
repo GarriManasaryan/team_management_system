@@ -83,3 +83,17 @@ _Use-cases_:
 
 _Use-cases_:
 * users can leave feedback for later discussions
+
+### Store and visualize data flow (from databases to product)
+
+This tool allows to visualize data transfer from database to final product (through all ETLs, intermediate scripts etc.), which will help developers to quickly identify the problem.  
+_Use-cases_:
+* managers (or project leads) can update data flow by changing databases or involved scripts;
+* users can search entities, like treatment status or diagnoses and view, where data originates and what processes are manipulating with it; 
+
+Here we can identify different data states (types):
+* database (storage);
+* ETL (scripts);
+* final product;
+* intermediate google sheet (storage);
+* analysts' working tool (where they select data, combine and prepare for final product);

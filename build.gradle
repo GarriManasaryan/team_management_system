@@ -8,13 +8,30 @@ group = 'com.team'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
 
+task copyJar(type: Copy) {
+	from jar // here it automatically reads jar file produced from jar task
+	rename {String filename -> return "team-management-system.jar"}
+	into "${rootProject.buildDir}/output-docker"
+}
+
+build.dependsOn copyJar
+
 repositories {
 	mavenCentral()
 }
 
 dependencies {
+
+	implementation 'junit:junit:4.13.1'
+	implementation 'com.google.code.gson:gson'
+	compileOnly 'org.jetbrains:annotations:23.0.0'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	runtimeOnly 'org.flywaydb:flyway-core'
+	runtimeOnly 'org.postgresql:postgresql'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.assertj:assertj-core:3.23.1'
+
 }
 
 tasks.named('test') {
