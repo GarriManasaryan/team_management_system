@@ -1,4 +1,4 @@
-package com.team.management.ports.adapters.backoffice.model;
+package com.team.management.ports.adapters.backoffice.model.user;
 
 import com.team.management.domain.user.Role;
 import org.jetbrains.annotations.NotNull;
