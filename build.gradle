@@ -8,13 +8,12 @@ group = 'com.team'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
 
-task copyJar(type: Copy) {
-	from jar // here it automatically reads jar file produced from jar task
+task copyAppJar(type:Copy){
+	dependsOn bootJar
+	from bootJar.archiveFile.get().asFile
 	rename {String filename -> return "team-management-system.jar"}
 	into "${rootProject.buildDir}/output-docker"
 }
-
-build.dependsOn copyJar
 
 repositories {
 	mavenCentral()

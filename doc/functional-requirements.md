@@ -48,13 +48,13 @@ Managers:
 * set capacities: orders, projects per hours;
 
 For example:
-→ Time Off
-→ Planned Meeting Load
-→ Expected Meeting Load
-→ Annotations time
-→ Content Time with Hard Deadlines
-→ Safety Time
-→ QC Time
+* Time Off
+* Planned Meeting Load
+* Expected Meeting Load
+* Annotations time
+* Content Time with Hard Deadlines
+* Safety Time
+* QC Time
 
 Capacity can include orders, projects, meetings and so on.
 
