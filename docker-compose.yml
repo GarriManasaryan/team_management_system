@@ -7,8 +7,11 @@ services:
     environment:
       - POSTGRES_PASSWORD=1
       - POSTGRES_USER=postgres
+    expose:
+      - "5433" # Publishes 5433 to other containers but NOT to host machine
     ports:
-      - "5432:5432"
+      - "5433:5433"
+    command: -p 5433
 
   backend:
     depends_on:
