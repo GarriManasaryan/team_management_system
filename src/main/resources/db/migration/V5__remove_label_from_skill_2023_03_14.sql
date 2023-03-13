@@ -1,0 +1,1 @@
+alter table tms_skills drop column label;
