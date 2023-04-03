@@ -27,4 +27,4 @@ jobs:
     - name: Print directory
       run: |
         tree -d .
-        ls build
+        ls build/output-docker
