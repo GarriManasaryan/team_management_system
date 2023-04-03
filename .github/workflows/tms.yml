@@ -19,11 +19,15 @@ jobs:
         java-version: '17'
         distribution: 'liberica'
     - name: Build with Gradle
-      uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
+      uses: gradle/gradle-build-action@v2.4.0
       with:
         arguments: build
         gradle-version: 7.6
 
+    - name: Print directory
+      run: |
+        tree -d .
+        # ls /build/
 
     - name: Build & push Docker image
       uses: mr-smithers-excellent/docker-build-push@v5
