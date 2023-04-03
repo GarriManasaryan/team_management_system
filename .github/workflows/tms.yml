@@ -27,15 +27,31 @@ jobs:
     - name: Print directory
       run: |
         tree -d .
-        echo ${{ secrets.DOCKER_USERNAME }}
-        echo ${{ secrets.DOCKER_PASSWORD }}
 
-    - name: Build & push Docker image
-      uses: mr-smithers-excellent/docker-build-push@v6.1
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v2
+      
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+      
+    - name: Login to Docker Hub
+      uses: docker/login-action@v2
       with:
-        image: tms/springboot-image-new
-        tags: latest
-        registry: docker.io
-        dockerfile: Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
+    
+    - name: Build and push
+      uses: docker/build-push-action@v4
+      with:
+        push: true
+        tags: user/app:latest
+
+#     - name: Build & push Docker image
+#       uses: mr-smithers-excellent/docker-build-push@v6.1
+#       with:
+#         image: tms/springboot-image-new
+#         tags: latest
+#         registry: docker.io
+#         dockerfile: Dockerfile
+#         username: ${{ secrets.DOCKER_USERNAME }}
+#         password: ${{ secrets.DOCKER_PASSWORD }}
