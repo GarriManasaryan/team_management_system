@@ -27,9 +27,11 @@ jobs:
     - name: Print directory
       run: |
         tree -d .
+        echo ${{ secrets.DOCKER_USERNAME }}
+        echo ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build & push Docker image
-      uses: mr-smithers-excellent/docker-build-push@v5
+      uses: mr-smithers-excellent/docker-build-push@v6.1
       with:
         image: tms/springboot-image-new
         tags: latest
