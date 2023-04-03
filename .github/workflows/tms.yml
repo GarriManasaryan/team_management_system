@@ -27,7 +27,7 @@ jobs:
     - name: Print directory
       run: |
         tree -d .
-        ls /build/output-docker
+        ls
 
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v2
