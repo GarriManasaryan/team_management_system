@@ -47,4 +47,4 @@ jobs:
         context: .
         file: Dockerfile
         push: true
-        tags: gm/team_management_system:latest
+        tags: garrri/team_management_system:latest
