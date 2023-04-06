@@ -5,7 +5,6 @@ import com.team.management.ports.adapters.backoffice.model.skill.SkillBackoffice
 import com.team.management.ports.adapters.backoffice.model.skill.SkillCreationRequest;
 import com.team.management.ports.adapters.backoffice.model.skill.SkillRenameRequest;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

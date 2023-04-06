@@ -1,6 +1,5 @@
 package com.team.management.application;
 
-import com.team.management.domain.responsibility.UserResponsibility;
 import com.team.management.domain.responsibility.UserResponsibilityRepository;
 import com.team.management.ports.adapters.backoffice.model.responsibility.UserResponsibilityBackofficeModel;
 import org.jetbrains.annotations.NotNull;
@@ -8,7 +7,6 @@ import org.jetbrains.annotations.Nullable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class UserResponsibilityService {

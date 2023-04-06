@@ -2,8 +2,6 @@ package com.team.management.ports.adapters.backoffice.resource;
 
 import com.team.management.application.UserResponsibilityService;
 import com.team.management.ports.adapters.backoffice.model.responsibility.UserResponsibilityBackofficeModel;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

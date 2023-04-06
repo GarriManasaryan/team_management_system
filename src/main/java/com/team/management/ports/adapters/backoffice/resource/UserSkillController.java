@@ -1,8 +1,6 @@
 package com.team.management.ports.adapters.backoffice.resource;
 
-import com.team.management.application.UserResponsibilityService;
 import com.team.management.application.UserSkillService;
-import com.team.management.ports.adapters.backoffice.model.responsibility.UserResponsibilityBackofficeModel;
 import com.team.management.ports.adapters.backoffice.model.skill.UserSkillBackofficeModel;
 import org.springframework.web.bind.annotation.*;
 

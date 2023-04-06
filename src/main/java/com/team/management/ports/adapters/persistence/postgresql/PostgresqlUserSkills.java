@@ -1,7 +1,5 @@
 package com.team.management.ports.adapters.persistence.postgresql;
 
-import com.team.management.domain.responsibility.UserResponsibility;
-import com.team.management.domain.responsibility.UserResponsibilityRepository;
 import com.team.management.domain.skill.UserSkillRepository;
 import com.team.management.domain.skill.UserSkills;
 import org.jetbrains.annotations.NotNull;

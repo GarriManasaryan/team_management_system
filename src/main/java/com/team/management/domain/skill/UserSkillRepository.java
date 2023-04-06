@@ -1,6 +1,5 @@
 package com.team.management.domain.skill;
 
-import com.team.management.domain.responsibility.UserResponsibility;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 

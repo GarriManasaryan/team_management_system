@@ -1,8 +1,6 @@
 package com.team.management.application;
 
-import com.team.management.domain.responsibility.UserResponsibilityRepository;
 import com.team.management.domain.skill.UserSkillRepository;
-import com.team.management.ports.adapters.backoffice.model.responsibility.UserResponsibilityBackofficeModel;
 import com.team.management.ports.adapters.backoffice.model.skill.UserSkillBackofficeModel;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
