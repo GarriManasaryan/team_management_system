@@ -34,7 +34,7 @@ jobs:
       uses: actions/upload-artifact@v3.1.2
       with:
         # Artifact name
-        name: backend-artifacts
+        name: backend-frontend-artifacts
         path: .
 
   build-image:
@@ -48,7 +48,7 @@ jobs:
         
     - uses: actions/download-artifact@v3
       with:
-        name: backend-artifacts
+        name: backend-frontend-artifacts
         path: .
         
     - name: Display structure of downloaded files
@@ -77,4 +77,4 @@ jobs:
         context: .
         file: Dockerfile
         push: true
-        tags: garrri/team_management_system:latest
+        tags: garrri/team_management_system_backend:latest
