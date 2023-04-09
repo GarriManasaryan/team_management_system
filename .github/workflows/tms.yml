@@ -25,6 +25,8 @@ jobs:
         arguments: copyAppJar
         gradle-version: 7.6
 
+        build-root-directory: backend
+
     - name: Print directory
       run: |
         tree -d .
