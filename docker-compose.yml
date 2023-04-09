@@ -2,7 +2,7 @@ version: "3"
 services:
   database:
     image: postgres:14.5
-    container_name: db_container_tms
+    container_name: db_container_tms_v2
     hostname: db_container_tms
     environment:
       - POSTGRES_PASSWORD=1
@@ -13,6 +13,9 @@ services:
       - "5433:5433"
     command: -p 5433
 
+    volumes:
+      - pg_data_tms:/var/lib/postgresql/data
+
   backend:
     depends_on:
       - database
@@ -20,3 +23,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8080:8080"
+
+volumes:
+  pg_data_tms:
