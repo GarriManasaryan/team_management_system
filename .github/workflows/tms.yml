@@ -30,7 +30,6 @@ jobs:
     - name: Print directory
       run: |
         tree -d .
-        ls build/output-docker
         
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.2
@@ -59,7 +58,6 @@ jobs:
     - name: Print directory
       run: |
         tree -d .
-        ls build/output-docker
 
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v2
