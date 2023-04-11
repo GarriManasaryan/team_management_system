@@ -1,0 +1,1 @@
+alter table tms_capacity_template drop column duration;
