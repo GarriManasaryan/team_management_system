@@ -1,11 +1,10 @@
 package com.team.management.ports.adapters.backoffice.resource;
 
 import com.team.management.application.CapacityTypeService;
-import com.team.management.ports.adapters.backoffice.model.capacity.CapacityTypeBackofficeModel;
-import com.team.management.ports.adapters.backoffice.model.capacity.CapacityTypeCreationRequest;
-import com.team.management.ports.adapters.backoffice.model.capacity.CapacityTypePatchRequest;
+import com.team.management.ports.adapters.backoffice.model.capacity.type.CapacityTypeBackofficeModel;
+import com.team.management.ports.adapters.backoffice.model.capacity.type.CapacityTypeCreationRequest;
+import com.team.management.ports.adapters.backoffice.model.capacity.type.CapacityTypePatchRequest;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

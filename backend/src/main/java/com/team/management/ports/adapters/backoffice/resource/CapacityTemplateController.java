@@ -1,9 +1,9 @@
 package com.team.management.ports.adapters.backoffice.resource;
 
 import com.team.management.application.CapacityTemplateService;
-import com.team.management.ports.adapters.backoffice.model.capacity.CapacityTemplateBackofficeModel;
-import com.team.management.ports.adapters.backoffice.model.capacity.CapacityTemplateCreationRequest;
-import com.team.management.ports.adapters.backoffice.model.capacity.CapacityTemplatePatchRequest;
+import com.team.management.ports.adapters.backoffice.model.capacity.template.CapacityTemplateBackofficeModel;
+import com.team.management.ports.adapters.backoffice.model.capacity.template.CapacityTemplateCreationRequest;
+import com.team.management.ports.adapters.backoffice.model.capacity.template.CapacityTemplatePatchRequest;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.team.management.ports.adapters.backoffice.model.capacity;
+package com.team.management.ports.adapters.backoffice.model.capacity.template;
 
 import org.jetbrains.annotations.NotNull;
 

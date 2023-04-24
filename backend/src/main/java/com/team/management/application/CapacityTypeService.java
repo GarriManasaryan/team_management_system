@@ -2,8 +2,8 @@ package com.team.management.application;
 
 import com.team.management.domain.capacity.CapacityType;
 import com.team.management.domain.capacity.CapacityTypeRepository;
-import com.team.management.ports.adapters.backoffice.model.capacity.CapacityTypeBackofficeModel;
-import com.team.management.ports.adapters.backoffice.model.capacity.CapacityTypeCreationRequest;
+import com.team.management.ports.adapters.backoffice.model.capacity.type.CapacityTypeBackofficeModel;
+import com.team.management.ports.adapters.backoffice.model.capacity.type.CapacityTypeCreationRequest;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.springframework.stereotype.Service;
@@ -22,7 +22,7 @@ public class CapacityTypeService {
 
     public void save(@NotNull CapacityTypeCreationRequest capacityTypeCreationRequest) {
         capacityTypeRepository.save(
-                CapacityType.ofId(
+                CapacityType.of(
                         capacityTypeCreationRequest.name(),
                         capacityTypeCreationRequest.defaultDuration()
                 )

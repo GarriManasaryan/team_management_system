@@ -9,7 +9,7 @@ public record CapacityTemplate(
         @NotNull String description
 ) {
 
-    public static CapacityTemplate ofId(
+    public static CapacityTemplate of(
             @NotNull String title,
             @NotNull String description
     ) {

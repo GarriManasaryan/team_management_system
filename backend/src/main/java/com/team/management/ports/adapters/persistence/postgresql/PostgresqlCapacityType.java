@@ -105,14 +105,12 @@ public class PostgresqlCapacityType implements CapacityTypeRepository {
         allParams.put("default_duration", defaultDuration != null ? defaultDuration.toString() : null);
 
         var sqlTemplate = """
-                select * from tms_task_types 
+                select * from tms_task_types
                 """;
 
         var queryParams = new MapSqlParameterSource();
 
-        if (allParams.values().stream().allMatch(Objects::isNull)) {
-            return jdbcOperations.query(sqlTemplate, queryParams, asCapacityType());
-        } else {
+        if (!allParams.values().stream().allMatch(Objects::isNull)) {
             var basicWhereStatement = "column_name = 'column_value'";
             List<String> allWhereStatements = new ArrayList<>();
 
@@ -123,11 +121,10 @@ public class PostgresqlCapacityType implements CapacityTypeRepository {
                 }
             }
 
-            sqlTemplate = sqlTemplate + String.join(" and ", allWhereStatements);
-
-            return jdbcOperations.query(sqlTemplate, queryParams, asCapacityType());
+            sqlTemplate = sqlTemplate + " where " + String.join(" and ", allWhereStatements);
 
         }
+        return jdbcOperations.query(sqlTemplate, queryParams, asCapacityType());
     }
 
     @Override

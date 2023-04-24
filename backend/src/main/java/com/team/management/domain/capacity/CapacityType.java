@@ -8,7 +8,7 @@ public record CapacityType(
         @NotNull String name,
         @NotNull Integer defaultDuration
 ) {
-    public static CapacityType ofId(
+    public static CapacityType of(
             @NotNull String name,
             @NotNull Integer defaultDuration
     ) {

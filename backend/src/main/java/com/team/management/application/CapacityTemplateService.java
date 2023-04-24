@@ -2,8 +2,8 @@ package com.team.management.application;
 
 import com.team.management.domain.capacity.CapacityTemplate;
 import com.team.management.domain.capacity.CapacityTemplateRepository;
-import com.team.management.ports.adapters.backoffice.model.capacity.CapacityTemplateBackofficeModel;
-import com.team.management.ports.adapters.backoffice.model.capacity.CapacityTemplateCreationRequest;
+import com.team.management.ports.adapters.backoffice.model.capacity.template.CapacityTemplateBackofficeModel;
+import com.team.management.ports.adapters.backoffice.model.capacity.template.CapacityTemplateCreationRequest;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.springframework.stereotype.Service;
@@ -22,7 +22,7 @@ public class CapacityTemplateService {
 
     public void save(@NotNull CapacityTemplateCreationRequest capacityTemplateCreationRequest) {
         capacityTemplateRepository.save(
-                CapacityTemplate.ofId(
+                CapacityTemplate.of(
                         capacityTemplateCreationRequest.title(),
                         capacityTemplateCreationRequest.description()
                 )
