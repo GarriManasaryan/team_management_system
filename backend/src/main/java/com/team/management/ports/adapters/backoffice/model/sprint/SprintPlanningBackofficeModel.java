@@ -1,4 +1,4 @@
-package com.team.management.ports.adapters.backoffice.model.sprintplanning;
+package com.team.management.ports.adapters.backoffice.model.sprint;
 
 import org.jetbrains.annotations.NotNull;
 

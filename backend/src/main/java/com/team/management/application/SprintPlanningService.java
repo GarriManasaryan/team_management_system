@@ -2,9 +2,8 @@ package com.team.management.application;
 
 import com.team.management.domain.planning.SprintPlanning;
 import com.team.management.domain.planning.SprintPlanningRepository;
-import com.team.management.ports.adapters.backoffice.model.capacity.eater.CapacityEaterBackofficeModel;
-import com.team.management.ports.adapters.backoffice.model.sprintplanning.SprintPlanningBackofficeModel;
-import com.team.management.ports.adapters.backoffice.model.sprintplanning.SprintPlanningCreationRequest;
+import com.team.management.ports.adapters.backoffice.model.sprint.SprintPlanningBackofficeModel;
+import com.team.management.ports.adapters.backoffice.model.sprint.SprintPlanningCreationRequest;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.springframework.stereotype.Service;

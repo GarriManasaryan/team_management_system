@@ -1,9 +1,9 @@
 package com.team.management.ports.adapters.backoffice.resource;
 
 import com.team.management.application.SprintPlanningService;
-import com.team.management.ports.adapters.backoffice.model.sprintplanning.SprintPlanningBackofficeModel;
-import com.team.management.ports.adapters.backoffice.model.sprintplanning.SprintPlanningCreationRequest;
-import com.team.management.ports.adapters.backoffice.model.sprintplanning.SprintPlanningPatchRequest;
+import com.team.management.ports.adapters.backoffice.model.sprint.SprintPlanningBackofficeModel;
+import com.team.management.ports.adapters.backoffice.model.sprint.SprintPlanningCreationRequest;
+import com.team.management.ports.adapters.backoffice.model.sprint.SprintPlanningPatchRequest;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
