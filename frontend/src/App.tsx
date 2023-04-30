@@ -1,24 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './tms_logo.png';
 import './App.css';
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+
+        {/* <NavBar/>
+        <Background></Background>
+        <Routes>
+          <Route path="/tasks" element={<ListTasks/>}></Route>
+          <Route path="/test_assessments" element={<ListTestTemplates/>}></Route>
+          <Route path="/view_test_assessments_test" element={<ViewTestTemplate/>}></Route>
+          <Route path="/candidates" element={<ListUsers/>}></Route>
+          <Route path="/add_candidate" element={<AddUser/>}></Route>
+          <Route path="/add_task" element={<AddTask/>}></Route>
+          <Route path="/add_task_to_test/:id" element={<AddTaskToTest/>}></Route>
+          <Route path="/edit_task/:id" element={<EditTask/>}></Route>
+          <Route path="/:userId/:testTemplateId" element={<StartTest/>}></Route>
+          <Route path="/test_processing/:id" element={<StartTest/>}></Route>
+        </Routes> */}
+        
+      </Router>
     </div>
   );
 }
