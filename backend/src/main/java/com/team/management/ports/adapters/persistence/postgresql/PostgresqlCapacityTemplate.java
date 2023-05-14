@@ -33,7 +33,9 @@ public class PostgresqlCapacityTemplate implements CapacityTemplateRepository {
     @Override
     public void save(@NotNull CapacityTemplate capacityTemplate) {
         var sqlTemplate = """
-                insert into tms_capacity_template values
+                insert into tms_capacity_template
+                 (id, title, description)
+                values
                  (:id, :title, :description)
                 """;
 

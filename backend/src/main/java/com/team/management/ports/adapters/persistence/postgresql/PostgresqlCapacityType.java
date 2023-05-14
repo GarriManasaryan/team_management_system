@@ -34,6 +34,7 @@ public class PostgresqlCapacityType implements CapacityTypeRepository {
     public void save(@NotNull CapacityType capacityType) {
         var sqlTemplate = """
                 insert into tms_task_types
+                (id, name, default_duration)
                 values
                 (:id, :name, :default_duration)
                 """;

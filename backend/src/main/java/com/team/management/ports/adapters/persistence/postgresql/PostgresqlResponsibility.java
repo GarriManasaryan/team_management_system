@@ -35,8 +35,9 @@ public class PostgresqlResponsibility implements ResponsibilityRepository {
     public void save(@NotNull Responsibility responsibility) {
         var sqlTemplate = """
                 insert into tms_responsibility
-                 values
-                 (:id, :name, :outer_id, :label) 
+                (id, name, outer_id, label) 
+                values
+                (:id, :name, :outer_id, :label) 
                 """;
 
         var queryParams = new MapSqlParameterSource()

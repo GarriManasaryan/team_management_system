@@ -34,6 +34,7 @@ public class PostgresqlCapacityTemplateEater implements CapacityTemplateEaterRep
     public void saveTemplateEater(@NotNull String capacityTemplateId, @NotNull String capacityEaterId) {
         var sqlTemplate = """
                 insert into tms_capacity_template_eaters
+                (capacity_template_id, capacity_eater_id)
                 values
                 (:capacity_template_id, :capacity_eater_id)
                 """;

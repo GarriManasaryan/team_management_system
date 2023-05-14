@@ -39,7 +39,9 @@ public class PostgresqlTeamRepository implements TeamRepository {
     public void save(@NotNull Team team){
         var sqlTemplate = """
                 insert into tms_teams
-                 values (:id, :name, :manager_id)
+                 (id, name, manager_id)
+                 values
+                 (:id, :name, :manager_id)
                 """;
         var queryParams = new MapSqlParameterSource()
                 .addValue("id", team.id())

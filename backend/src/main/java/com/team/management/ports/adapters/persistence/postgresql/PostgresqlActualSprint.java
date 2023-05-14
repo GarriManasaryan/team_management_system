@@ -36,6 +36,7 @@ public class PostgresqlActualSprint implements ActualSprintRepository {
     public void save(@NotNull ActualSprint actualSprint) {
         var sqlTemplate = """
                 insert into tms_actual_sprint
+                (id, name, planning_id, start_at)
                 values
                 (:id,:name,:planning_id,:start_at)
                 """;

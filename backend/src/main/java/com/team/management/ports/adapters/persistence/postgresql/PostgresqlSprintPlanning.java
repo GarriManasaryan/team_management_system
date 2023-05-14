@@ -36,6 +36,7 @@ public class PostgresqlSprintPlanning implements SprintPlanningRepository {
     public void save(@NotNull SprintPlanning sprintPlanning) {
         var sqlTemplate = """
                 insert into tms_sprint_planning
+                (id, name, time_unit_id, capacity_template_id, max_capacity)
                 values
                 (:id, :name, :time_unit_id, :capacity_template_id, :max_capacity)
                 """;

@@ -35,6 +35,7 @@ public class PostgresqlSprintPlanningParticipantCapacity implements SprintPlanni
     public void save(@NotNull String userId, @NotNull String planningId, @NotNull String capacityEaterId, @NotNull Integer duration) {
         var sqlTemplate = """
                 insert into tms_sprint_planning_participant_capacity
+                (user_id, sprint_planning_id, capacity_eater_id, duration)
                 values
                 (:user_id,:sprint_planning_id,:capacity_eater_id,:duration)
                 """;

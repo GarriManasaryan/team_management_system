@@ -35,6 +35,7 @@ public class PostgresqlTimeUnit implements TimeUnitRepository {
     public void save(@NotNull TimeUnit timeUnit) {
         var sqlTemplate = """
                 insert into tms_time_units 
+                 (id, name, duration)
                  values
                  (:id, :name, :duration)
                 """;

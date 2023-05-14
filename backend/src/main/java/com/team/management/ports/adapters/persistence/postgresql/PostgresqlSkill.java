@@ -27,7 +27,9 @@ public class PostgresqlSkill implements SkillRepository {
     public void save(@NotNull Skill skill) {
         var sqlTemplate = """
                 insert into tms_skills
-                 values(:id, :name)
+                (id, name)
+                values
+                (:id, :name)
                 """;
 
         var queryParams = new MapSqlParameterSource()

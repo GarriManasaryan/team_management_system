@@ -42,6 +42,7 @@ public class PostgresqlCapacityEater implements CapacityEaterRepository {
     public void save(@NotNull CapacityEater capacityEater) {
         var sqlTemplate = """
                 insert into tms_capacity_eater
+                (id, name, type_id, priority, deadline, duration, status)
                 values
                 (:id, :name, :type_id, :priority, :deadline::timestamp with time zone, :duration, :status)
                 """;
