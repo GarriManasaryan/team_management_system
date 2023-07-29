@@ -233,4 +233,5 @@ public class PostgresqlUserRepository implements UserRepository {
                 }
         );
     }
+
 }
