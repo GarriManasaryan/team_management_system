@@ -24,5 +24,18 @@ services:
     ports:
       - "8080:8080"
 
+#  frontend:
+##    image: garrri/testing_system_frontend:latest
+#    depends_on:
+#      - backend
+#
+#    build:
+#      dockerfile: Dockerfile.fk
+#    ports:
+#      - "3000:3000"
+#
+#    stdin_open: true
+#    tty: true
+
 volumes:
   pg_data_tms:

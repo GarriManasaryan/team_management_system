@@ -6,6 +6,7 @@ import com.team.management.domain.user.UserRepository;
 import com.team.management.ports.adapters.backoffice.model.user.UserBackofficeModel;
 import com.team.management.ports.adapters.backoffice.model.user.UserCreationRequest;
 import com.team.management.ports.adapters.backoffice.model.user.UserNewEntityBackOfficeModel;
+import com.team.management.ports.adapters.persistence.postgresql.filesTest.JsonWriterUserRepo;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.springframework.stereotype.Service;
@@ -17,9 +18,11 @@ import java.util.Optional;
 public class UserService {
 
     private final UserRepository userRepository;
+    private final JsonWriterUserRepo userJsonRepo;
 
-    public UserService(UserRepository userRepository) {
+    public UserService(UserRepository userRepository, JsonWriterUserRepo userJsonRepo) {
         this.userRepository = userRepository;
+        this.userJsonRepo = userJsonRepo;
     }
 
     public void replaceEmail(@NotNull String email, @NotNull String id) {
@@ -59,7 +62,7 @@ public class UserService {
     @NotNull
     public UserNewEntityBackOfficeModel saveUser(@NotNull UserCreationRequest userCreationRequest) {
         return new UserNewEntityBackOfficeModel(
-                userRepository.save(new User(
+                userJsonRepo.save(new User(
                         IdGenerator.generate("user"),
                         userCreationRequest.name(),
                         userCreationRequest.email(),
